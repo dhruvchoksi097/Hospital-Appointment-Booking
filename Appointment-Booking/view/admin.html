@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Activity Log</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+         body { font-family: 'Inter', sans-serif; }
+         .log-entry {
+             border-left: 4px solid #6366f1; /* Indigo */
+             padding: 10px 15px;
+             margin-bottom: 10px;
+             background-color: #f3f4f6; /* gray-100 */
+             border-radius: 4px;
+             transition: background-color 0.3s ease;
+         }
+         .log-entry:hover {
+             background-color: #e5e7eb; /* gray-200 */
+         }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-purple-600">Admin Dashboard</h1>
+             <a href="/" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition duration-300">Back to Login</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 p-4">
+        <div class="bg-white p-6 rounded-lg shadow fade-in">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">System-Wide Activity Log (Simulated Blockchain)</h2>
+            <p class="text-gray-600 mb-6">This log shows all significant actions performed by users across the system.</p>
+            <div id="admin-blockchain-data" class="space-y-3 font-mono text-sm">
+                <p class="text-gray-500 italic">Loading system activity log...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>
