@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css"> <style>
+        /* Basic transition for smoother hover effects */
+        button, a {
+            transition: all 0.3s ease;
+        }
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl w-full max-w-md transform transition-all duration-500 hover:scale-105">
+        <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Patient Login</h1>
+        <form id="login-form" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" required
+                       class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required
+                       class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+            </div>
+            <div>
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform hover:scale-105 transition duration-300">
+                    Login
+                </button>
+            </div>
+        </form>
+        <p id="login-message" class="mt-4 text-center text-red-600 text-sm"></p>
+        <p class="mt-6 text-center text-sm text-gray-600">
+            Don't have an account?
+            <a href="/register.html" class="font-medium text-blue-600 hover:text-blue-500 hover:underline">
+                Register here
+            </a>
+        </p>
+         <p class="mt-2 text-center text-sm text-gray-600">
+            Are you an Admin?
+            <a href="/admin.html" class="font-medium text-purple-600 hover:text-purple-500 hover:underline">
+                Admin Dashboard
+            </a>
+        </p>
+    </div>
+
+    <script src="/js/auth.js"></script>
+</body>
+</html>
