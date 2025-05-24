@@ -1,0 +1,86 @@
+[
+  {
+    "timestamp": "2025-04-21T09:40:01.869Z",
+    "username": "Dhruv",
+    "action": "User Registered",
+    "details": "User 'Dhruv' (Dhruv Choksi) registered."
+  },
+  {
+    "timestamp": "2025-04-21T09:40:12.315Z",
+    "username": "Dhruv",
+    "action": "Login Failed",
+    "details": "Failed login attempt for user 'Dhruv'."
+  },
+  {
+    "timestamp": "2025-04-21T09:40:24.205Z",
+    "username": "Dhruv",
+    "action": "User Login",
+    "details": "User 'Dhruv' logged in successfully."
+  },
+  {
+    "timestamp": "2025-04-21T09:40:48.642Z",
+    "username": "Dhruv",
+    "action": "Bill Payment (Simulated)",
+    "details": "Simulated payment of $100 for bill ID simulated_bill_1745228448639."
+  },
+  {
+    "timestamp": "2025-04-21T09:40:54.237Z",
+    "username": "Dhruv",
+    "action": "Bill Payment (Simulated)",
+    "details": "Simulated payment of $100 for bill ID simulated_bill_1745228454222."
+  },
+  {
+    "timestamp": "2025-04-21T09:41:29.082Z",
+    "username": "Dhruv",
+    "action": "User Logout",
+    "details": "User 'Dhruv' logged out."
+  },
+  {
+    "timestamp": "2025-04-21T09:42:08.335Z",
+    "username": "Raj",
+    "action": "User Registered",
+    "details": "User 'Raj' (Raj m) registered."
+  },
+  {
+    "timestamp": "2025-04-21T09:42:21.919Z",
+    "username": "Raj",
+    "action": "User Login",
+    "details": "User 'Raj' logged in successfully."
+  },
+  {
+    "timestamp": "2025-04-21T09:42:33.312Z",
+    "username": "Raj",
+    "action": "User Logout",
+    "details": "User 'Raj' logged out."
+  },
+  {
+    "timestamp": "2025-04-21T09:44:01.720Z",
+    "username": "Dhruv",
+    "action": "User Login",
+    "details": "User 'Dhruv' logged in successfully."
+  },
+  {
+    "timestamp": "2025-04-21T09:45:55.385Z",
+    "username": "Dhruv",
+    "action": "Appointment Booked",
+    "details": "Booked for 2025-04-24. Reason: Dental Checkup"
+  },
+  {
+    "timestamp": "2025-04-21T09:46:01.537Z",
+    "username": "Dhruv",
+    "action": "User Logout",
+    "details": "User 'Dhruv' logged out."
+  },
+  {
+    "timestamp": "2025-04-21T13:46:29.785Z",
+    "username": "Dhruv",
+    "action": "User Login",
+    "details": "User 'Dhruv' logged in successfully."
+  },
+  {
+    "timestamp": "2025-04-21T17:08:51.084Z",
+    "username": "Sujal",
+    "action": "User Login",
+    "details": "User 'Sujal' logged in successfully."
+  }
+]
