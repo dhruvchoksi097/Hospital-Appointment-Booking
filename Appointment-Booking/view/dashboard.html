@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+        /* Simple fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+         body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for active tab */
+        .tab-button.active {
+             background-color: #3b82f6; /* blue-600 */
+             color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">Patient Dashboard</h1>
+            <div>
+                 <span id="welcome-message" class="mr-4 text-gray-700">Welcome, Patient!</span>
+                <button id="logout-button" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-300">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 p-4">
+        <div class="mb-6 border-b border-gray-300">
+            <nav class="flex space-x-4" aria-label="Tabs">
+                <button data-tab="records" class="tab-button active px-4 py-2 rounded-t-lg font-medium text-gray-600 hover:bg-gray-200 focus:outline-none transition duration-300">Medical Records</button>
+                <button data-tab="bills" class="tab-button px-4 py-2 rounded-t-lg font-medium text-gray-600 hover:bg-gray-200 focus:outline-none transition duration-300">Bills</button>
+                <button data-tab="appointments" class="tab-button px-4 py-2 rounded-t-lg font-medium text-gray-600 hover:bg-gray-200 focus:outline-none transition duration-300">Appointments</button>
+                <button data-tab="blockchain" class="tab-button px-4 py-2 rounded-t-lg font-medium text-gray-600 hover:bg-gray-200 focus:outline-none transition duration-300">Activity Log</button>
+            </nav>
+        </div>
+
+        <div id="tab-content-container">
+            <div id="records-content" class="tab-content active fade-in bg-white p-6 rounded-lg shadow">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Your Medical Records</h2>
+                <p class="text-gray-600 mb-4">This is where your medical history will be displayed.</p>
+                <div id="records-data" class="space-y-3">
+                    <p class="text-gray-500 italic">Loading records...</p>
+                </div>
+            </div>
+
+            <div id="bills-content" class="tab-content fade-in bg-white p-6 rounded-lg shadow">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Your Bills</h2>
+                <p class="text-gray-600 mb-4">View your outstanding and paid bills.</p>
+                <div id="bills-data" class="space-y-3">
+                     <p class="text-gray-500 italic">Loading bills...</p>
+                </div>
+                <button id="pay-bill-button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">Simulate Paying a Bill</button>
+            </div>
+
+            <div id="appointments-content" class="tab-content fade-in bg-white p-6 rounded-lg shadow">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Your Appointments</h2>
+                <p class="text-gray-600 mb-4">View past and upcoming appointments. Book a new one below.</p>
+                <div id="appointments-data" class="space-y-3 mb-6">
+                    <p class="text-gray-500 italic">Loading appointments...</p>
+                </div>
+                <hr class="my-6">
+                <h3 class="text-xl font-semibold mb-3 text-gray-700">Book New Appointment</h3>
+                <form id="appointment-form" class="space-y-4">
+                     <div>
+                        <label for="appointment-date" class="block text-sm font-medium text-gray-700">Select Date</label>
+                        <input type="date" id="appointment-date" name="date" required class="mt-1 block w-full md:w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                     <div>
+                        <label for="appointment-reason" class="block text-sm font-medium text-gray-700">Reason for Visit</label>
+                        <textarea id="appointment-reason" name="reason" rows="3" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Book Appointment</button>
+                </form>
+                 <p id="appointment-message" class="mt-3 text-sm text-green-600"></p>
+            </div>
+
+            <div id="blockchain-content" class="tab-content fade-in bg-white p-6 rounded-lg shadow">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Your Activity Log</h2>
+                <p class="text-gray-600 mb-4">This log shows a history of your key actions (like bookings and payments) in the system.</p>
+                <div id="blockchain-data" class="space-y-2 text-sm font-mono">
+                    <p class="text-gray-500 italic">Loading activity log...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
